@@ -10,6 +10,7 @@ labels_dict = {0:'MASK', 1:'NO MASK'}
 color_dict = {0:(0,255, 0), 1:(0,0,255)}
 
 # read an input image
+# use you image files
 image = cv2.imread('images/input/no_mask.jpg')
 image_gray = cv2.imread('images/input/no_mask.jpg', cv2.IMREAD_GRAYSCALE)
 
@@ -43,6 +44,7 @@ for (x,y,w,h) in faces:
     cv2.rectangle(image,(x,y),(x+w,y+h),color_dict[label],2)
     cv2.rectangle(image,(x,y-40),(x+w,y),color_dict[label],-1)
     cv2.putText(image, labels_dict[label], (x, y-10),cv2.FONT_HERSHEY_SIMPLEX,0.8,(255,255,255),2)
+    # creating output images
     cv2.imwrite('output/no_mask.jpg', image)
     image=mpimg.imread('output/no_mask.jpg')
     plt.axis('off')
