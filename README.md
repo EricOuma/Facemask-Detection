@@ -14,7 +14,7 @@ In the models folder are two model files:
 2. **model-v2.h5**: Version 2 of the model. Dealt with overfitting by introducing Data Augmentation and Dropout Regularization.
 
 ### To run a live demo via your webcam or any other video source
-Run the **video.py** file
+Run the **video.py** file [Example Preview](https://youtu.be/yr5Zt3Fzsao)
 
 ### To work on images only
 Run the **image.py** file
